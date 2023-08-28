@@ -19,7 +19,7 @@ plt.title('Movimento retilíneo com aceleração constante') # Título do gráfi
 plt.plot(xData, yData, 'bo', label='Dados') # Plotando valores informados pelo usuário.
 popt, pcov = curve_fit(y, xData, yData) # Calculando parâmetros fixos por meio da função da linha X.
 xFit = np.arange(0.0, t[n-1], 0.000001) # Definindo o tamanho e o intervalo da curva de tendência.
-plt.plot(xFit, y(xFit, *popt), 'r', label=f'Parâmetros fixos de ajuste:\n C={popt[0]:.5} m/s**2, v0={popt[1]:.5} m/s, x0={popt[2]:.5e} m\nEquação: x = C*t**2 + v0*t + x0') # Plotando valores calculados no ajuste de curva.
+plt.plot(xFit, y(xFit, *popt), 'r', label=f'Parâmetros fixos de ajuste:\n C={popt[0]:.6} m/s**2, v0={popt[1]:.5} m/s, x0={popt[2]:.5e} m\nEquação: x = C*t**2 + v0*t + x0') # Plotando valores calculados no ajuste de curva.
 plt.xlabel('t (s)') # Título da eixo x.
 plt.ylabel('x (m)') # Título da eixo y.
 plt.legend() # Exibição da legenda.
